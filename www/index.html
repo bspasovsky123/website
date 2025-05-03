@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Менеджер задач</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Менеджер задач</h1>
+
+    <div class="controls">
+      <input type="text" id="taskInput" placeholder="Новая задача" />
+      <button onclick="addTask()">Добавить</button>
+    </div>
+
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Поиск задач..." oninput="renderTasks()" />
+      <div>
+        <button onclick="setFilter('all')">Все</button>
+        <button onclick="setFilter('active')">Активные</button>
+        <button onclick="setFilter('completed')">Выполненные</button>
+      </div>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
